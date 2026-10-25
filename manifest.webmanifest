@@ -1,0 +1,11 @@
+{
+  "name": "健身管家 · 个人训练操作系统",
+  "short_name": "健身管家",
+  "description": "记录训练，设计计划，保持节奏。",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b0d12",
+  "theme_color": "#0b0d12",
+  "lang": "zh-CN",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
