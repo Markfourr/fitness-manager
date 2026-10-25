@@ -350,3 +350,7 @@ body { background: var(--bg); -webkit-tap-highlight-color: transparent; }
   .tabbar { bottom: 18px; border: 1px solid var(--line); border-radius: 22px; }
   .app-shell.is-subpage .main-content { max-width: 680px; margin: 0 auto; }
 }
+
+/* 子页面保留底部主导航，避免一次无效点击后失去页面出口。 */
+.app-shell.is-subpage { padding-bottom: calc(94px + env(safe-area-inset-bottom)); }
+.tabbar.is-hidden { display: grid; }

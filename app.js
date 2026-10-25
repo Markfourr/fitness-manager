@@ -68,7 +68,8 @@ function render() {
   const isSubpage = ['settings', 'calendar', 'workout'].includes(view) || Boolean(navigationParent);
   document.body.dataset.view = view;
   document.querySelector('.app-shell')?.classList.toggle('is-subpage', isSubpage);
-  document.querySelector('.tabbar')?.classList.toggle('is-hidden', isSubpage);
+  // 主导航始终可用；子页面用返回箭头表达层级，不阻断底部切换。
+  document.querySelector('.tabbar')?.classList.remove('is-hidden');
   document.querySelectorAll('.tab').forEach(tab => tab.classList.toggle('active', tab.dataset.view === view));
   const app = document.querySelector('#app');
   if (view === 'home') app.innerHTML = renderHome();
